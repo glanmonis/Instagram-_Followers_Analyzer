@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follograph — Instagram Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='Favicon.png') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="noise"></div>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="wordmark">
+                <span class="wordmark-icon">
+                    <!-- <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.5" />
+                        <circle cx="14" cy="14" r="5" fill="currentColor" opacity="0.3" />
+                        <path d="M14 1 C14 1, 22 7, 22 14 C22 21, 14 27, 14 27 C14 27, 6 21, 6 14 C6 7, 14 1, 14 1Z"
+                            stroke="currentColor" stroke-width="1.5" fill="none" />
+                    </svg> -->
+                </span>
+                Follograph
+            </div>
+            <h1 class="hero-title">Know your <em>real</em> audience.</h1>
+            <p class="hero-sub">Upload your Instagram export files and instantly discover who's not following you back,
+                who you're ignoring, and who your true mutual connections are.</p>
+        </div>
+        <div class="hero-scroll-hint">↓</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-wrap">
+
+        <!-- Upload Section -->
+        <section class="section upload-section" id="upload">
+            <div class="section-label">Step 01 — Upload Data</div>
+            <h2 class="section-title">Drop your files</h2>
+
+            <div class="upload-grid">
+                <label class="upload-card" id="followers-drop" for="followers-file">
+                    <div class="upload-card-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path
+                                d="M18 4C14.686 4 12 6.686 12 10C12 13.314 14.686 16 18 16C21.314 16 24 13.314 24 10C24 6.686 21.314 4 18 4Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6 30C6 24.477 11.373 20 18 20C24.627 20 30 24.477 30 30" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="28" cy="10" r="4" fill="currentColor" opacity="0.2" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <path d="M8 10C8 7.791 9.791 6 12 6" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" opacity="0.4" />
+                        </svg>
+                    </div>
+                    <div class="upload-card-text">
+                        <span class="upload-card-title" id="followers-label">followers.json</span>
+                        <span class="upload-card-sub">Drag & drop or click to browse</span>
+                    </div>
+                    <div class="upload-card-status" id="followers-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Awaiting file</span>
+                    </div>
+                    <input type="file" id="followers-file" accept=".json" hidden>
+                </label>
+
+                <label class="upload-card" id="following-drop" for="following-file">
+                    <div class="upload-card-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path
+                                d="M18 4C14.686 4 12 6.686 12 10C12 13.314 14.686 16 18 16C21.314 16 24 13.314 24 10C24 6.686 21.314 4 18 4Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6 30C6 24.477 11.373 20 18 20C24.627 20 30 24.477 30 30" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="28" cy="10" r="4" fill="currentColor" opacity="0.2" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <path d="M26 10L28 12L32 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="upload-card-text">
+                        <span class="upload-card-title" id="following-label">following.json</span>
+                        <span class="upload-card-sub">Drag & drop or click to browse</span>
+                    </div>
+                    <div class="upload-card-status" id="following-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Awaiting file</span>
+                    </div>
+                    <input type="file" id="following-file" accept=".json" hidden>
+                </label>
+            </div>
+
+            <div class="analyze-wrap">
+                <button id="analyze-btn" class="btn-primary" disabled>
+                    <span class="btn-text">Run Analysis</span>
+                    <span class="btn-arrow">→</span>
+                    <span class="btn-loader" id="btn-loader" hidden>
+                        <svg class="spin" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="32"
+                                stroke-dashoffset="10" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="section results-section" id="results" style="display:none;">
+            <div class="section-label">Step 02 — Analysis</div>
+            <h2 class="section-title">Here's your breakdown</h2>
+
+            <!-- Stat Cards -->
+            <div class="stats-grid">
+                <div class="stat-card stat-neutral">
+                    <span class="stat-num" id="total-following">—</span>
+                    <span class="stat-label">Following</span>
+                </div>
+                <div class="stat-card stat-neutral">
+                    <span class="stat-num" id="total-followers">—</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat-card stat-positive">
+                    <span class="stat-num" id="mutual-followers">—</span>
+                    <span class="stat-label">Mutual</span>
+                </div>
+                <div class="stat-card stat-warning">
+                    <span class="stat-num" id="not-following-back-count">—</span>
+                    <span class="stat-label">Ghost you</span>
+                </div>
+                <div class="stat-card stat-muted">
+                    <span class="stat-num" id="not-followed-back-count">—</span>
+                    <span class="stat-label">You ghost</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-bar">
+                <div class="search-wrap">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    <input type="text" id="search" placeholder="Search usernames…">
+                </div>
+                <div class="sort-buttons">
+                    <button id="sort-btn" class="btn-control">A → Z</button>
+                    <button id="filter-btn" class="btn-control">Z → A</button>
+                </div>
+            </div>
+
+            <!-- Lists -->
+            <div class="lists-grid">
+                <div class="list-panel">
+                    <div class="list-panel-header">
+                        <div class="list-panel-dot dot-warm"></div>
+                        <h3>They don't follow back</h3>
+                        <span class="list-badge" id="nfb-badge">0</span>
+                    </div>
+                    <ul class="user-list" id="not-following-back-list"></ul>
+                </div>
+
+                <div class="list-panel">
+                    <div class="list-panel-header">
+                        <div class="list-panel-dot dot-cool"></div>
+                        <h3>You don't follow back</h3>
+                        <span class="list-badge" id="nfb2-badge">0</span>
+                    </div>
+                    <ul class="user-list" id="not-followed-back-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section class="section help-section" id="help">
+            <div class="section-label">How to — Export Instagram Data</div>
+            <h2 class="section-title">Getting your files</h2>
+            <div class="help-grid">
+                <div class="help-step">
+                    <span class="help-num">01</span>
+                    <p>Open the <strong>Instagram</strong> app or website and go to <strong>Settings</strong>.</p>
+                </div>
+                <div class="help-step">
+                    <span class="help-num">02</span>
+                    <p>Navigate to <strong>Accounts Center → Your Information and Permissions → Download Your
+                            Information</strong>.</p>
+                </div>
+                <div class="help-step">
+                    <span class="help-num">03</span>
+                    <p>Select your account, choose <strong>JSON</strong> as the format, then request the download.</p>
+                </div>
+                <div class="help-step">
+                    <span class="help-num">04</span>
+                    <p>Wait for an email, download and extract the ZIP file, then upload <code>followers.json</code> and
+                        <code>following.json</code> above.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="developer-info">
+        <div class="dev-card">
+            <a href="https://glan-monis-portfolio.netlify.app" target="_blank" title="Visit Portfolio">
+                <img src="{{ url_for('static', filename='Favicon.png') }}" alt="Glan Monis" class="dev-avatar">
+            </a>
+            <h3>Glan Monis</h3>
+
+            <!-- <p>Web Developer | Data Enthusiast | Creator of Follograph</p> -->
+
+            <div class="dev-socials">
+                <a href="https://github.com/glanmonis" target="_blank" aria-label="GitHub" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/glan-monis" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/glan_monis" target="_blank" aria-label="Instagram" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://x.com/glan_monis" target="_blank" aria-label="Twitter" title="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Follograph — your data stays local, always.</p>
+        <!-- <div class="footer-socials">
+        <a href="https://github.com/glanmonis" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/glan-monis" target="_blank">LinkedIn</a>
+        <a href="https://x.com/glan_monis" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/glan_monis" target="_blank">Instagram</a>
+    </div> -->
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:glanpritheshmonis@gmail.com">✉️ glanpritheshmonis@gmail.com</a></p>
+            <p>Portfolio: <a href="https://glan-monis-portfolio.netlify.app" target="_blank">🌐 Visit My Portfolio</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='Script.js') }}"></script>
+</body>
+
+</html>
