@@ -57,7 +57,17 @@
 
 ###
 
-<p align="left">Frontend<br>HTML5<br>CSS3 (Custom UI design)<br>JavaScript (Vanilla JS)<br>Backend<br>Python<br>Flask<br>Deployment<br>Vercel</p>
+<p align="left">
+ ➜ Frontend<br>
+   • HTML5<br>CSS3 (Custom UI design)<br>
+   • JavaScript (Vanilla JS)<br>
+  
+ ➜ Backend<br>
+   • Python<br>
+   • Flask<br>
+  
+ ➜ Deployment<br>
+   • Vercel</p>
 
 ###
 
@@ -106,7 +116,7 @@
   Navigate to Accounts Center ➜ Your Information and Permissions ➜ Download Your Information <br>
   Select your account, choose JSON as the format, then request the download<br>
   Wait for the email, download and extract the ZIP<br>
-  Upload followers.json and following.json to Follograph<br><br><br>
+  Upload followers.json and following.json to Follograph <br><br><br>
   </p>
 
 ###
@@ -123,7 +133,9 @@
 
 ###
 
-<p align="left">not_following_back = following - followers<br>not_followed_back = followers - following<br>mutual = followers & following</p>
+<p align="left">not_following_back = following - followers <br>
+  not_followed_back = followers - following <br>
+  mutual = followers & following </p>
 
 ###
 
