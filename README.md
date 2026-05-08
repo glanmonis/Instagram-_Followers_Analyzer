@@ -107,13 +107,7 @@
   Select your account, choose JSON as the format, then request the download<br>
   Wait for the email, download and extract the ZIP<br>
   Upload followers.json and following.json to Follograph<br><br><br>
-  Go to Instagram Settings<br>
-  Navigate to:<br>
-  Accounts Center ➜ Your Information ➜ Download Your Information<br>
-  Select:<br>
-  Format: JSON<br>
-  Download and extract ZIP<br>
-  Upload required files into Follograph</p>
+  </p>
 
 ###
 
@@ -124,7 +118,8 @@
 <p align="left">The Flask API processes uploaded JSON files and:<br><br>
   Extracts usernames from:<br>
   followers.json<br>
-  following.json<br>Uses set operations:</p>
+  following.json<br>
+  Uses set operations:</p>
 
 ###
 
@@ -136,12 +131,17 @@
 
 ###
 
-<p align="left">1. Clone Repository<br>
-  git clone https://github.com/your-username/follograph.git<br>
- <code> cd follograph </code> <br>
+<p align="left">
+  1. Clone Repository<br>
+  <code> git clone https://github.com/your-username/follograph.git <br>
+  cd follograph </code> <br>
+  
   2. Install Dependencies<br>
   <code> pip install -r requirements.txt </code> <br>
-  3. Run Server<br>python app.py<br>
+  
+  3. Run Server<br>
+  <code> python app.py </code> <br>
+  
   4. Open Browser<br>
  <code> http://localhost:5000 </code> </p>
 
@@ -151,10 +151,11 @@
 
 ###
 
-<p align="left">No login required<br>
-  No database used<br>
-  Files are processed in-memory<br>
-  Nothing is stored or tracked</p>
+<p align="left">
+  • No login required<br>
+  • No database used<br>
+  • Files are processed in-memory<br>
+  • Nothing is stored or tracked</p>
 
 ###
 
