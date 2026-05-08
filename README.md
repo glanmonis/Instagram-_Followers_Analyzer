@@ -59,8 +59,9 @@
 
 <p align="left">
  ➜ Frontend<br>
-   • HTML5<br>CSS3 (Custom UI design)<br>
-   • JavaScript (Vanilla JS)<br>
+   • HTML5 <br>
+   • CSS3 (Custom UI design) <br>
+   • JavaScript (Vanilla JS) <br>
   
  ➜ Backend<br>
    • Python<br>
