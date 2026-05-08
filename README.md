@@ -8,7 +8,10 @@
 
 ###
 
-<p align="left">Follograph is a modern web application that helps you analyze your Instagram data and understand your real audience.<br>Upload your Instagram export files and instantly discover:<br><br>Who doesn’t follow you back 👀<br>Who you’re not following back 🤔<br>Your mutual connections 🤝</p>
+<p align="left">Follograph is a modern web application that helps you analyze your Instagram data and understand your real audience.<br>Upload your Instagram export files and instantly discover: <br><br>
+  ➜ Who doesn’t follow you back 👀<br> 
+  ➜ Who you’re not following back 🤔<br> 
+  ➜ Your mutual connections 🤝</p>
 
 ###
 
@@ -24,14 +27,13 @@
 
 ###
 
-<p align="left">Hello World!!</p>
 <img src="Screenshots/Insta Analyzer 1.png" alt="Home Page"/>
 <img src="Screenshots/Insta Analyzer 2.png" alt="Home Page"/>
 <img src="Screenshots/Insta Analyzer 3.png" alt="Home Page"/>
 
 ###
 
-<p align="left">Hello World!!</p>
+<p align="left"> </p>
 
 ###
 
@@ -39,7 +41,14 @@
 
 ###
 
-<p align="left">📂 Drag & Drop JSON upload (followers & following)<br>⚡ Instant analysis using Flask backend<br>📊 Real-time stats with animated counters<br>🔍 Search usernames<br>🔤 Sort (A → Z, Z → A)<br>📱 Fully responsive modern UI<br>🎨 Clean, professional design (glassmorphism + dark theme)<br>🔐 100% private — your data is never stored</p>
+<p align="left">
+  ➜ 📂 Drag & Drop JSON upload (followers & following) <br>
+  ➜ ⚡Instant analysis using Flask backend <br>
+  ➜ 📊 Real-time stats with animated counters <br>
+  ➜ 🔍 Search usernames <br>
+  ➜ 🔤 Sort (A → Z, Z → A) <br>
+  ➜ 📱 Fully responsive modern UI<br>🎨 Clean, professional design (glassmorphism + dark theme) <br>
+  ➜ 🔐 100% private — your data is never stored </p>
 
 ###
 
@@ -55,7 +64,22 @@
 
 ###
 
-<p align="left">Follograph/<br>│<br>├── templates/<br>│   └── Index.html<br>│<br>├── static/<br>│   ├── Style.css<br>│   ├── Script.js<br>│   └── Favicon.png<br>│<br>├── app.py<br>├── requirements.txt<br>├── vercel.json<br>└── README.md</p>
+<p align="left">
+  Follograph/<br>
+  │<br>
+  ├── templates/<br>
+  │   └── Index.html<br>
+  │<br>
+  ├── static/<br>
+  │   ├── Style.css<br>
+  │   ├── Script.js<br>
+  │   
+  └── Favicon.png<br>
+  │<br>
+  ├── app.py<br>
+  ├── requirements.txt <br>
+  ├── vercel.json <br>
+  └── README.md </p>
 
 ###
 
@@ -63,7 +87,13 @@
 
 ###
 
-<p align="left">1. Export your Instagram data<br>2. Upload:<br>followers.json<br>following.json<br>3. Click Run Analysis<br>4. View insights instantly</p>
+<p align="left">
+  1. Export your Instagram data<br>
+  2. Upload:<br>
+  <\t> followers.json<br>
+  <\t> following.json<br>
+  3. Click Run Analysis<br>
+  4. View insights instantly</p>
 
 ###
 
@@ -71,7 +101,18 @@
 
 ###
 
-<p align="left">Open Instagram → go to Settings<br>Navigate to Accounts Center → Your Information and Permissions → Download Your Information<br>Select your account, choose JSON as the format, then request the download<br>Wait for the email, download and extract the ZIP<br>Upload followers.json and following.json to Follograph<br><br><br>Go to Instagram Settings<br>Navigate to:<br>Accounts Center → Your Information → Download Your Information<br>Select:<br>Format: JSON<br>Download and extract ZIP<br>Upload required files into Follograph</p>
+<p align="left">Open Instagram ➜ go to Settings <br>
+  Navigate to Accounts Center ➜ Your Information and Permissions ➜ Download Your Information <br>
+  Select your account, choose JSON as the format, then request the download<br>
+  Wait for the email, download and extract the ZIP<br>
+  Upload followers.json and following.json to Follograph<br><br><br>
+  Go to Instagram Settings<br>
+  Navigate to:<br>
+  Accounts Center ➜ Your Information ➜ Download Your Information<br>
+  Select:<br>
+  Format: JSON<br>
+  Download and extract ZIP<br>
+  Upload required files into Follograph</p>
 
 ###
 
@@ -79,7 +120,10 @@
 
 ###
 
-<p align="left">The Flask API processes uploaded JSON files and:<br><br>Extracts usernames from:<br>followers.json<br>following.json<br>Uses set operations:</p>
+<p align="left">The Flask API processes uploaded JSON files and:<br><br>
+  Extracts usernames from:<br>
+  followers.json<br>
+  following.json<br>Uses set operations:</p>
 
 ###
 
@@ -91,7 +135,13 @@
 
 ###
 
-<p align="left">1. Clone Repository<br>git clone https://github.com/your-username/follograph.git<br>cd follograph<br>2. Install Dependencies<br>pip install -r requirements.txt<br>3. Run Server<br>python app.py<br>4. Open Browser<br>http://localhost:5000</p>
+<p align="left">1. Clone Repository<br>
+  git clone https://github.com/your-username/follograph.git<br>
+  cd follograph<br>
+  2. Install Dependencies<br>
+  pip install -r requirements.txt<br>
+  3. Run Server<br>python app.py<br>
+  4. Open Browser<br>http://localhost:5000</p>
 
 ###
 
@@ -99,7 +149,10 @@
 
 ###
 
-<p align="left">No login required<br>No database used<br>Files are processed in-memory<br>Nothing is stored or tracked</p>
+<p align="left">No login required<br>
+  No database used<br>
+  Files are processed in-memory<br>
+  Nothing is stored or tracked</p>
 
 ###
 
@@ -107,7 +160,10 @@
 
 ###
 
-<p align="left">Glan Monis<br><br>🌐 Portfolio: https://glan-monis-portfolio.netlify.app<br>💻 GitHub: https://github.com/glanmonis<br>🔗 LinkedIn: https://www.linkedin.com/in/glan-monis</p>
+<p align="left">Glan Monis<br><br>
+  🌐 Portfolio: https://glan-monis-portfolio.netlify.app<br>
+  💻 GitHub: https://github.com/glanmonis<br>
+  🔗 LinkedIn: https://www.linkedin.com/in/glan-monis</p>
 
 ###
 
@@ -119,5 +175,3 @@
 
 ###
 
-
-https://instagram-followers-analyzer-theta.vercel.app/
