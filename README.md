@@ -26,8 +26,8 @@
 
 <p align="left">Hello World!!</p>
 <img src="Screenshots/Insta Analyzer 1.png" alt="Home Page"/>
-<img src="Screenshots/Insta Analyzer 2" alt="Home Page"/>
-<img src="Screenshots/Insta Analyzer 1" alt="Home Page"/>
+<img src="Screenshots/Insta Analyzer 2.png" alt="Home Page"/>
+<img src="Screenshots/Insta Analyzer 3.png" alt="Home Page"/>
 
 ###
 
