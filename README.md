@@ -8,7 +8,8 @@
 
 ###
 
-<p align="left">Follograph is a modern web application that helps you analyze your Instagram data and understand your real audience.<br>Upload your Instagram export files and instantly discover: <br><br>
+<p align="left">Follograph is a modern web application that helps you analyze your Instagram data and understand your real audience.<br>
+  Upload your Instagram export files and instantly discover: <br><br>
   ➜ Who doesn’t follow you back 👀<br> 
   ➜ Who you’re not following back 🤔<br> 
   ➜ Your mutual connections 🤝</p>
@@ -90,8 +91,8 @@
 <p align="left">
   1. Export your Instagram data<br>
   2. Upload:<br>
-  <\t> followers.json<br>
-  <\t> following.json<br>
+     • followers.json<br>
+     • following.json<br>
   3. Click Run Analysis<br>
   4. View insights instantly</p>
 
@@ -137,11 +138,12 @@
 
 <p align="left">1. Clone Repository<br>
   git clone https://github.com/your-username/follograph.git<br>
-  cd follograph<br>
+ <code> cd follograph </code> <br>
   2. Install Dependencies<br>
-  pip install -r requirements.txt<br>
+  <code> pip install -r requirements.txt </code> <br>
   3. Run Server<br>python app.py<br>
-  4. Open Browser<br>http://localhost:5000</p>
+  4. Open Browser<br>
+ <code> http://localhost:5000 </code> </p>
 
 ###
 
